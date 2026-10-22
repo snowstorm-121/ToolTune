@@ -1,0 +1,65 @@
+{
+  "samples": 190,
+  "strict_decision_match": {
+    "numerator": 89,
+    "denominator": 190,
+    "value": 0.46842105263157896
+  },
+  "call_recall": {
+    "numerator": 88,
+    "denominator": 95,
+    "value": 0.9263157894736842
+  },
+  "tool_name_accuracy": {
+    "numerator": 88,
+    "denominator": 95,
+    "value": 0.9263157894736842
+  },
+  "argument_schema_validity": {
+    "numerator": 88,
+    "denominator": 95,
+    "value": 0.9263157894736842
+  },
+  "generated_call_schema_validity": {
+    "numerator": 88,
+    "denominator": 88,
+    "value": 1.0
+  },
+  "argument_strict_match": {
+    "numerator": 66,
+    "denominator": 95,
+    "value": 0.6947368421052632
+  },
+  "unavailable_tools_false_call_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "value": null
+  },
+  "clarification": {
+    "numerator": 0,
+    "denominator": 0,
+    "value": null
+  },
+  "prediction_actions": {
+    "error": 79,
+    "no_call": 23,
+    "call": 88
+  },
+  "failures": {
+    "output_truncated": 72,
+    "invalid_call_envelope": 7,
+    "arguments_mismatch": 22
+  },
+  "tool_name_accuracy_by_tool_count": {
+    "1": {
+      "numerator": 88,
+      "denominator": 95,
+      "value": 0.9263157894736842
+    }
+  },
+  "resource": {
+    "output_tokens": 24686,
+    "generation_seconds": 566.7093342491426,
+    "length_stops": 72
+  }
+}

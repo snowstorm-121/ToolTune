@@ -11,7 +11,7 @@ Project code is a thin orchestration/data/validation layer. It does not implemen
 
 1. Use the pinned official Instruct template, as described above.
 2. Supply `assistant_loss` to the upstream trainer through its supported loss callback. MLX-LM 0.32.2's default loss uses `positions <= length`, including one padding target when padding exists. Our bound is `positions < length`. No installed source is modified. Tests pin both observed upstream behavior and the corrected target selection.
-3. Upstream training automatically calls `maybe_set_recommended_wired_limit`. The T1 runner temporarily replaces only that call with a no-op for the duration of training. Inference uses upstream `generate_step` directly to avoid the higher-level wired-limit context. This changes no system or process allocator limits.
+3. Upstream training automatically calls `maybe_set_recommended_wired_limit`. The T1 and T3 runners temporarily replace only that call with a no-op for the duration of training. Inference uses upstream `generate_step` directly to avoid the higher-level wired-limit context. This changes no system or process allocator limits.
 4. Explicit LoRA modules: last four transformer blocks, attention q/v projections, rank 8, MLX `scale=16` (a multiplier, not a PEFT `alpha` field). Actual tensor names/counts are saved, not inferred from defaults.
 
 ## Licenses

@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "samples": 190,
+    "strict_decision_match": {
+      "numerator": 100,
+      "denominator": 190,
+      "value": 0.5263157894736842
+    },
+    "call_recall": {
+      "numerator": 91,
+      "denominator": 95,
+      "value": 0.9578947368421052
+    },
+    "tool_name_accuracy": {
+      "numerator": 91,
+      "denominator": 95,
+      "value": 0.9578947368421052
+    },
+    "argument_schema_validity": {
+      "numerator": 91,
+      "denominator": 95,
+      "value": 0.9578947368421052
+    },
+    "generated_call_schema_validity": {
+      "numerator": 91,
+      "denominator": 91,
+      "value": 1.0
+    },
+    "argument_strict_match": {
+      "numerator": 71,
+      "denominator": 95,
+      "value": 0.7473684210526316
+    },
+    "unavailable_tools_false_call_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "clarification": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "prediction_actions": {
+      "error": 68,
+      "no_call": 31,
+      "call": 91
+    },
+    "failures": {
+      "output_truncated": 66,
+      "invalid_call_envelope": 2,
+      "arguments_mismatch": 20,
+      "missing_call": 2
+    },
+    "tool_name_accuracy_by_tool_count": {
+      "1": {
+        "numerator": 91,
+        "denominator": 95,
+        "value": 0.9578947368421052
+      }
+    },
+    "resource": {
+      "output_tokens": 23494,
+      "generation_seconds": 602.1117074117064,
+      "length_stops": 66
+    }
+  },
+  "resources": {
+    "sample_count": 299,
+    "pressure": {
+      "kern.memorystatus_vm_pressure_level: 1": 279,
+      "kern.memorystatus_vm_pressure_level: 2": 20
+    },
+    "swap_MiB": {
+      "first": 1079.56,
+      "last": 1079.56,
+      "max": 1079.56
+    },
+    "problem": null,
+    "mlx_peak_bytes": 2766495580
+  },
+  "adapter_tensors_loaded": 16,
+  "independent_process": true
+}

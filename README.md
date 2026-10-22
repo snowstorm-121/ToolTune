@@ -2,9 +2,9 @@
 
 Local Qwen3-4B-Instruct-2507 quantized LoRA tool-calling experiment on Apple M5 / 16 GB.
 
-Work follows the existing detailed T1–T4 plan. T1 is a **synthetic resource and interface check**, not Glaive quality evaluation. T2 data processing, T3 formal training and T4 frozen Test comparison are separate acceptance stages. The Validation result below is for checkpoint selection; final generalization claims require T4.
+Work follows the existing detailed T1–T4 plan. T1 is a **synthetic resource and interface check**, not Glaive quality evaluation. T2 data processing, T3 formal training and T4 frozen Test comparison are separate acceptance stages. Validation selected the checkpoint; the frozen Test result below is the final measured comparison.
 
-Current status: **T1–T3 passed; T4 has not run**. Active evaluation protocol: `v2-balanced`, approved before model evaluation; Validation 100 calls + 100 noncalls, Test 95 + 95. Training retains the same 4,000-example pool; the formal 200-update run exposed 800 examples. Original v1 is preserved. Details: `reports/T1-resource-smoke.md`, `reports/T2-data-protocol.md`, `reports/T2-balanced-protocol.md`, `reports/T3-validation.md`.
+Current status: **T1–T4 passed**. Active evaluation protocol: `v2-balanced`, approved before model evaluation; Validation 100 calls + 100 noncalls, Test 95 + 95. Training retains the same 4,000-example pool; the formal 200-update run exposed 800 examples. Original v1 is preserved. Details: `reports/T1-resource-smoke.md`, `reports/T2-data-protocol.md`, `reports/T2-balanced-protocol.md`, `reports/T3-validation.md`, `reports/T4-test.md`, `reports/INTERVIEW.md`.
 
 ## Environment and T1 reproduction
 
@@ -23,7 +23,7 @@ Model snapshot location: `artifacts/model_path.txt`. Restore this path from the 
 
 ## What this repository includes
 
-Code, locked dependencies, configs, upstream licenses, source/split ID manifests and T1–T3 reports are versioned. Small measured summaries are kept under `reports/evidence/`; full local logs and tensors remain local. T1 is a synthetic smoke experiment, not a trained model quality result.
+Code, locked dependencies, configs, upstream licenses, source/split ID manifests and T1–T4 reports are versioned. Small measured summaries are kept under `reports/evidence/`; full local logs and tensors remain local. T1 is a synthetic smoke experiment, not a trained model quality result.
 
 Model weights, raw/derived Glaive data, adapters, `.venv`, caches and `artifacts/` are excluded from Git. A fresh clone therefore does not include the assets required for model/template integration tests or full hash-contract validation. Obtain the pinned upstream model/data separately and restore the local asset manifests before running those commands. The absolute interpreter paths above document the original machine; use your own Python 3.12 and uv paths on another machine. The committed contracts describe the measured local experiment and are not a claim that a fresh clone alone passes full validation.
 
@@ -52,7 +52,22 @@ PYTHONPATH=src .venv/bin/python scripts/recompute_validation.py
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/verify_t3.py
 ```
 
-The second command needs the pinned local model, data, adapter and Apple Metal. To create a new experiment from the frozen T2 data, run `scripts/t3.py preflight`, then `baseline`, then `train` using the same offline environment variables. The runner refuses to overwrite an existing run. T3 work is currently on the local `t3-validation` branch and has not been pushed to GitHub.
+The second command needs the pinned local model, data, adapter and Apple Metal. To create a new experiment from the frozen T2 data, run `scripts/t3.py preflight`, then `baseline`, then `train` using the same offline environment variables. The runner refuses to overwrite an existing run.
+
+## T4 frozen Test result
+
+Both arms independently loaded the same pinned MLX base and used exactly the same 190 Test prompts. Strict decision match, including complete EOS output, was **89/190 (46.84%)** without an adapter and **100/190 (52.63%)** with the selected adapter: 17 questions improved, six regressed. Reference arguments matched on **66/95** versus **71/95** gold calls. Among the newly correct questions, seven noncalls finished within the fixed output budget and six calls recovered a complete `tool_call` envelope. The remaining failures include 66 adapter outputs stopped by the 256-token limit. This balanced diagnostic set does not establish production accuracy, broad multi-tool routing, or natural-language answer quality. See `reports/T4-test.md` for every denominator, paired failure cases, resources and limitations.
+
+Full first-pass predictions, scores, prompt IDs, resource samples and the frozen contract remain under `artifacts/t4-test-v1/`; small audit evidence is under `reports/evidence/t4/`. Recompute and verify the existing run with:
+
+```sh
+cd /Users/yyy/code/ToolTune
+PYTHONPATH=src .venv/bin/python scripts/recompute_test.py
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/verify_t4.py
+.venv/bin/python scripts/demo_tools.py
+```
+
+The local tool demo uses fixed constructed calls and does not invoke the model or enter the Test score. `reports/INTERVIEW.md` contains the two-minute presentation, data flow, design decisions and evidence-backed follow-up answers.
 
 ## T2 commands and data
 

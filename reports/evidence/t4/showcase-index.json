@@ -1,0 +1,50 @@
+[
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:112844:a2",
+    "role": "correct_call",
+    "note": "complete play_music call, no real music execution"
+  },
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:088344:a2",
+    "role": "format_improvement",
+    "note": "closing tool_call tag recovered"
+  },
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:037855:a4",
+    "role": "missing_call_regression",
+    "note": "prose promise without structured calendar call"
+  },
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:081350:a2",
+    "role": "action_metric_limitation",
+    "note": "model refusal counted as correct no_call action"
+  },
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:095636:a4",
+    "role": "source_reference_issue",
+    "note": "reference password absent from visible context"
+  },
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:090538:a6",
+    "role": "argument_reference_mismatch",
+    "note": "extra comedy genre in a contextual follow-up"
+  },
+  {
+    "split": "test",
+    "sample_id": "glaive-v2:090538:a8",
+    "role": "no_repeat_call",
+    "note": "answer after historical tool response"
+  },
+  {
+    "split": "valid",
+    "sample_id": "glaive-v2:073945:a2",
+    "role": "qualitative_clarification",
+    "note": "no reviewed clarification label; excluded from that metric"
+  }
+]
