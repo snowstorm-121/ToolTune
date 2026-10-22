@@ -1,0 +1,20 @@
+{
+  "files": {
+    "configs/train.yaml": "527a9b7dba821f439547cc2eacafb9c81732687e647406bc57caa047e09afc7d",
+    "configs/evaluation-balanced.json": "048718e36c6182f1cb25256cfb8da46308a00a52c06b19aebb64adaa2dacc622",
+    "configs/chat_template.jinja": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+    "scripts/t3.py": "77f0493de3e47e27b4f99c12a9650261922a3331bbe7af84fcc14ab27330df8f",
+    "src/tooltune/evaluate.py": "66ab6194948bbdd2ae8b27a71810f56b6183014ecd367fef58912204a549be39",
+    "src/tooltune/metrics.py": "7d5ff12fc97361dc50fb0e7cdb665156442cc1c7962aeb8379ecc15634e5a08d"
+  },
+  "data_contract_sha256": "6b4ea150ed552d4bb4f46133d19c668a95c25081676c421cc80aef2794f5465e",
+  "model_manifest_sha256": "8be1fc09c33a1f030ffa3b74a500d669e95f59e6a202f7474c67cae012211e66",
+  "packages": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "numpy": "2.5.4",
+    "transformers": "5.20.2",
+    "jsonschema": "4.26.0"
+  },
+  "python": "3.12.15 (main, Oct 14 2026, 00:55:37) [Clang 23.1.3 ]"
+}

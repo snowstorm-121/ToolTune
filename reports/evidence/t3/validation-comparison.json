@@ -1,0 +1,218 @@
+{
+  "status": "passed",
+  "all_metrics_recomputed_match": true,
+  "all_prompts_identical": true,
+  "selected": "U200",
+  "validation_only": true,
+  "test_used": false,
+  "results": {
+    "B0": {
+      "samples": 200,
+      "strict_decision_match": {
+        "numerator": 94,
+        "denominator": 200,
+        "value": 0.47
+      },
+      "call_recall": {
+        "numerator": 92,
+        "denominator": 100,
+        "value": 0.92
+      },
+      "tool_name_accuracy": {
+        "numerator": 92,
+        "denominator": 100,
+        "value": 0.92
+      },
+      "argument_schema_validity": {
+        "numerator": 90,
+        "denominator": 100,
+        "value": 0.9
+      },
+      "generated_call_schema_validity": {
+        "numerator": 91,
+        "denominator": 93,
+        "value": 0.978494623655914
+      },
+      "argument_strict_match": {
+        "numerator": 67,
+        "denominator": 100,
+        "value": 0.67
+      },
+      "unavailable_tools_false_call_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "clarification": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "prediction_actions": {
+        "error": 79,
+        "no_call": 28,
+        "call": 93
+      },
+      "failures": {
+        "output_truncated": 72,
+        "unexpected_call": 1,
+        "arguments_mismatch": 23,
+        "arguments_schema": 2,
+        "invalid_call_envelope": 7,
+        "missing_call": 1
+      },
+      "tool_name_accuracy_by_tool_count": {
+        "1": {
+          "numerator": 92,
+          "denominator": 100,
+          "value": 0.92
+        }
+      }
+    },
+    "U100": {
+      "samples": 200,
+      "strict_decision_match": {
+        "numerator": 103,
+        "denominator": 200,
+        "value": 0.515
+      },
+      "call_recall": {
+        "numerator": 98,
+        "denominator": 100,
+        "value": 0.98
+      },
+      "tool_name_accuracy": {
+        "numerator": 98,
+        "denominator": 100,
+        "value": 0.98
+      },
+      "argument_schema_validity": {
+        "numerator": 97,
+        "denominator": 100,
+        "value": 0.97
+      },
+      "generated_call_schema_validity": {
+        "numerator": 98,
+        "denominator": 99,
+        "value": 0.98989898989899
+      },
+      "argument_strict_match": {
+        "numerator": 73,
+        "denominator": 100,
+        "value": 0.73
+      },
+      "unavailable_tools_false_call_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "clarification": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "prediction_actions": {
+        "error": 70,
+        "no_call": 31,
+        "call": 99
+      },
+      "failures": {
+        "output_truncated": 69,
+        "unexpected_call": 1,
+        "arguments_mismatch": 24,
+        "arguments_schema": 1,
+        "missing_call": 1,
+        "invalid_call_envelope": 1
+      },
+      "tool_name_accuracy_by_tool_count": {
+        "1": {
+          "numerator": 98,
+          "denominator": 100,
+          "value": 0.98
+        }
+      }
+    },
+    "U200": {
+      "samples": 200,
+      "strict_decision_match": {
+        "numerator": 107,
+        "denominator": 200,
+        "value": 0.535
+      },
+      "call_recall": {
+        "numerator": 99,
+        "denominator": 100,
+        "value": 0.99
+      },
+      "tool_name_accuracy": {
+        "numerator": 99,
+        "denominator": 100,
+        "value": 0.99
+      },
+      "argument_schema_validity": {
+        "numerator": 97,
+        "denominator": 100,
+        "value": 0.97
+      },
+      "generated_call_schema_validity": {
+        "numerator": 98,
+        "denominator": 100,
+        "value": 0.98
+      },
+      "argument_strict_match": {
+        "numerator": 76,
+        "denominator": 100,
+        "value": 0.76
+      },
+      "unavailable_tools_false_call_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "clarification": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "prediction_actions": {
+        "error": 68,
+        "no_call": 32,
+        "call": 100
+      },
+      "failures": {
+        "output_truncated": 68,
+        "unexpected_call": 1,
+        "arguments_mismatch": 21,
+        "arguments_schema": 2,
+        "missing_call": 1
+      },
+      "tool_name_accuracy_by_tool_count": {
+        "1": {
+          "numerator": 99,
+          "denominator": 100,
+          "value": 0.99
+        }
+      }
+    }
+  },
+  "paired_strict_transitions": {
+    "all": {
+      "both_correct": 93,
+      "improved": 14,
+      "regressed": 1,
+      "both_wrong": 92
+    },
+    "call": {
+      "both_correct": 67,
+      "improved": 9,
+      "regressed": 0,
+      "both_wrong": 24
+    },
+    "no_call": {
+      "both_correct": 26,
+      "improved": 5,
+      "regressed": 1,
+      "both_wrong": 68
+    }
+  }
+}

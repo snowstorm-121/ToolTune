@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "selected_adapter": "adapters/t3-r8-v1/update-0200",
+  "adapter_tensor_count": 16,
+  "all_adapter_tensors_reloaded_exactly": true,
+  "all_frozen_base_tensors_match_pretraining_snapshot": true,
+  "train_probe_sample_id": "glaive-v2:078990:a6",
+  "train_probe_max_logit_change": 11.3125,
+  "test_model_evaluation_run": false,
+  "checks": {
+    "pytest": {
+      "exit_code": 0,
+      "stdout": "..................................................................       [100%]\n66 passed in 1.19s"
+    },
+    "frozen_T2": {
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"version\": \"v2-balanced\",\n  \"verified_files\": 65,\n  \"counts\": {\n    \"train\": 4000,\n    \"valid\": 200,\n    \"test\": 190\n  },\n  \"train_unchanged\": true,\n  \"model_evaluation_run\": false\n}"
+    },
+    "recompute": {
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"all_metrics_recomputed_match\": true,\n  \"all_prompts_identical\": true,\n  \"selected\": \"U200\",\n  \"validation_only\": true,\n  \"test_used\": false,\n  \"paired_strict_transitions\": {\n    \"all\": {\n      \"both_correct\": 93,\n      \"improved\": 14,\n      \"regressed\": 1,\n      \"both_wrong\": 92\n    },\n    \"call\": {\n      \"both_correct\": 67,\n      \"improved\": 9,\n      \"regressed\": 0,\n      \"both_wrong\": 24\n    },\n    \"no_call\": {\n      \"both_correct\": 26,\n      \"improved\": 5,\n      \"regressed\": 1,\n      \"both_wrong\": 68\n    }\n  }\n}"
+    }
+  },
+  "time_unix": 1792652436.961208
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "local_probe_permission",
+    "observed": "ImportError: [metal::load_device] No Metal device available when importing mlx.optimizers in the restricted shell",
+    "impact": "metadata helper only; model runs already used authorized Metal access",
+    "resolution": "read the installed optimizer constructor with Python AST, without loading Metal or changing packages"
+  },
+  {
+    "kind": "resolved_optimizer_default",
+    "observed": "mlx.optimizers.Adam 0.32.4 has bias_correction=False by default",
+    "resolution": "preserve the same optimizer in diagnostic and formal runs; record resolved defaults explicitly, do not equate to PyTorch defaults"
+  },
+  {
+    "kind": "output_budget_limit",
+    "observed": "B0 produced 72 length-stopped outputs at fixed max_tokens=256",
+    "resolution": "retain all 200 denominators and the frozen budget; separate output completion from call/argument changes in analysis"
+  },
+  {
+    "kind": "runtime_budget_estimate",
+    "observed": "first 10 Validation generations took 41.9s vs about 13.5s for a training-side probe",
+    "resolution": "revise the wall-clock estimate without changing updates, dataset, model or decoder; preserve actual timings"
+  }
+]

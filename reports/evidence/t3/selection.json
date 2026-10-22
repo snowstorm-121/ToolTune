@@ -1,0 +1,270 @@
+{
+  "selected": {
+    "updates": 200,
+    "path": "adapters/t3-r8-v1/update-0200",
+    "sha256": "997877f895acb3efc710ff567d99143a4ebf0b45ff9c1518852c78e87edeb1a0",
+    "summary": {
+      "samples": 200,
+      "strict_decision_match": {
+        "numerator": 107,
+        "denominator": 200,
+        "value": 0.535
+      },
+      "call_recall": {
+        "numerator": 99,
+        "denominator": 100,
+        "value": 0.99
+      },
+      "tool_name_accuracy": {
+        "numerator": 99,
+        "denominator": 100,
+        "value": 0.99
+      },
+      "argument_schema_validity": {
+        "numerator": 97,
+        "denominator": 100,
+        "value": 0.97
+      },
+      "generated_call_schema_validity": {
+        "numerator": 98,
+        "denominator": 100,
+        "value": 0.98
+      },
+      "argument_strict_match": {
+        "numerator": 76,
+        "denominator": 100,
+        "value": 0.76
+      },
+      "unavailable_tools_false_call_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "clarification": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "prediction_actions": {
+        "error": 68,
+        "no_call": 32,
+        "call": 100
+      },
+      "failures": {
+        "output_truncated": 68,
+        "unexpected_call": 1,
+        "arguments_mismatch": 21,
+        "arguments_schema": 2,
+        "missing_call": 1
+      },
+      "tool_name_accuracy_by_tool_count": {
+        "1": {
+          "numerator": 99,
+          "denominator": 100,
+          "value": 0.99
+        }
+      },
+      "resource": {
+        "output_tokens": 25233,
+        "generation_seconds": 692.4861622494645,
+        "length_stops": 68
+      }
+    },
+    "validation_loss": 0.8224275708198547
+  },
+  "candidates": [
+    {
+      "updates": 100,
+      "path": "adapters/t3-r8-v1/update-0100",
+      "sha256": "4da5ef7fbe1e8500de2e94741d40f31bf8132d17e11443c7f2da74af86a3598c",
+      "summary": {
+        "samples": 200,
+        "strict_decision_match": {
+          "numerator": 103,
+          "denominator": 200,
+          "value": 0.515
+        },
+        "call_recall": {
+          "numerator": 98,
+          "denominator": 100,
+          "value": 0.98
+        },
+        "tool_name_accuracy": {
+          "numerator": 98,
+          "denominator": 100,
+          "value": 0.98
+        },
+        "argument_schema_validity": {
+          "numerator": 97,
+          "denominator": 100,
+          "value": 0.97
+        },
+        "generated_call_schema_validity": {
+          "numerator": 98,
+          "denominator": 99,
+          "value": 0.98989898989899
+        },
+        "argument_strict_match": {
+          "numerator": 73,
+          "denominator": 100,
+          "value": 0.73
+        },
+        "unavailable_tools_false_call_rate": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "clarification": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "prediction_actions": {
+          "error": 70,
+          "no_call": 31,
+          "call": 99
+        },
+        "failures": {
+          "output_truncated": 69,
+          "unexpected_call": 1,
+          "arguments_mismatch": 24,
+          "arguments_schema": 1,
+          "missing_call": 1,
+          "invalid_call_envelope": 1
+        },
+        "tool_name_accuracy_by_tool_count": {
+          "1": {
+            "numerator": 98,
+            "denominator": 100,
+            "value": 0.98
+          }
+        },
+        "resource": {
+          "output_tokens": 25688,
+          "generation_seconds": 717.06967070885,
+          "length_stops": 69
+        }
+      },
+      "validation_loss": 0.8469157814979553
+    },
+    {
+      "updates": 200,
+      "path": "adapters/t3-r8-v1/update-0200",
+      "sha256": "997877f895acb3efc710ff567d99143a4ebf0b45ff9c1518852c78e87edeb1a0",
+      "summary": {
+        "samples": 200,
+        "strict_decision_match": {
+          "numerator": 107,
+          "denominator": 200,
+          "value": 0.535
+        },
+        "call_recall": {
+          "numerator": 99,
+          "denominator": 100,
+          "value": 0.99
+        },
+        "tool_name_accuracy": {
+          "numerator": 99,
+          "denominator": 100,
+          "value": 0.99
+        },
+        "argument_schema_validity": {
+          "numerator": 97,
+          "denominator": 100,
+          "value": 0.97
+        },
+        "generated_call_schema_validity": {
+          "numerator": 98,
+          "denominator": 100,
+          "value": 0.98
+        },
+        "argument_strict_match": {
+          "numerator": 76,
+          "denominator": 100,
+          "value": 0.76
+        },
+        "unavailable_tools_false_call_rate": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "clarification": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null
+        },
+        "prediction_actions": {
+          "error": 68,
+          "no_call": 32,
+          "call": 100
+        },
+        "failures": {
+          "output_truncated": 68,
+          "unexpected_call": 1,
+          "arguments_mismatch": 21,
+          "arguments_schema": 2,
+          "missing_call": 1
+        },
+        "tool_name_accuracy_by_tool_count": {
+          "1": {
+            "numerator": 99,
+            "denominator": 100,
+            "value": 0.99
+          }
+        },
+        "resource": {
+          "output_tokens": 25233,
+          "generation_seconds": 692.4861622494645,
+          "length_stops": 68
+        }
+      },
+      "validation_loss": 0.8224275708198547
+    }
+  ],
+  "rule": "Validation strict match; reviewed unavailable-tools false-call rate if defined; earlier update",
+  "test_used": false,
+  "training": {
+    "optimizer_updates": 200,
+    "micro_steps": 800,
+    "effective_batch": 4,
+    "unique_examples_exposed": 800,
+    "supervised_tokens_exposed": 40821,
+    "input_tokens_exposed": 263776,
+    "trainable_parameters": 327680,
+    "frozen_base_unchanged": true,
+    "changed_adapter_tensors": [
+      "model.layers.32.self_attn.q_proj.lora_a",
+      "model.layers.32.self_attn.q_proj.lora_b",
+      "model.layers.32.self_attn.v_proj.lora_a",
+      "model.layers.32.self_attn.v_proj.lora_b",
+      "model.layers.33.self_attn.q_proj.lora_a",
+      "model.layers.33.self_attn.q_proj.lora_b",
+      "model.layers.33.self_attn.v_proj.lora_a",
+      "model.layers.33.self_attn.v_proj.lora_b",
+      "model.layers.34.self_attn.q_proj.lora_a",
+      "model.layers.34.self_attn.q_proj.lora_b",
+      "model.layers.34.self_attn.v_proj.lora_a",
+      "model.layers.34.self_attn.v_proj.lora_b",
+      "model.layers.35.self_attn.q_proj.lora_a",
+      "model.layers.35.self_attn.q_proj.lora_b",
+      "model.layers.35.self_attn.v_proj.lora_a",
+      "model.layers.35.self_attn.v_proj.lora_b"
+    ],
+    "wall_seconds_including_checkpoints": 2024.0028614159673,
+    "mlx_peak_bytes": 3346181081
+  },
+  "resources": {
+    "sample_count": 998,
+    "pressure": {
+      "kern.memorystatus_vm_pressure_level: 1": 92,
+      "kern.memorystatus_vm_pressure_level: 2": 906
+    },
+    "swap_MiB": {
+      "first": 1398.75,
+      "last": 1503.19,
+      "max": 1535.19
+    },
+    "problem": null,
+    "mlx_peak_bytes": 3346181081
+  }
+}

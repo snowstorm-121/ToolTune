@@ -2,9 +2,9 @@
 
 Local Qwen3-4B-Instruct-2507 quantized LoRA tool-calling experiment on Apple M5 / 16 GB.
 
-Work follows the existing detailed T1–T4 plan. T1 is a **synthetic resource and interface check**, not Glaive quality evaluation. T2 data processing, T3 formal training and T4 frozen Test comparison are separate acceptance stages. No fine-tuning improvement is claimed before the fair comparison exists.
+Work follows the existing detailed T1–T4 plan. T1 is a **synthetic resource and interface check**, not Glaive quality evaluation. T2 data processing, T3 formal training and T4 frozen Test comparison are separate acceptance stages. The Validation result below is for checkpoint selection; final generalization claims require T4.
 
-Current status: **T1 and T2 passed**. Active evaluation protocol: `v2-balanced`, approved before model evaluation; Validation 100 calls + 100 noncalls, Test 95 + 95. Training retains the same 4,000 examples. Original v1 is preserved. T3/T4 have not started. Details: `reports/T1-resource-smoke.md`, `reports/T2-data-protocol.md`, `reports/T2-balanced-protocol.md`.
+Current status: **T1–T3 passed; T4 has not run**. Active evaluation protocol: `v2-balanced`, approved before model evaluation; Validation 100 calls + 100 noncalls, Test 95 + 95. Training retains the same 4,000-example pool; the formal 200-update run exposed 800 examples. Original v1 is preserved. Details: `reports/T1-resource-smoke.md`, `reports/T2-data-protocol.md`, `reports/T2-balanced-protocol.md`, `reports/T3-validation.md`.
 
 ## Environment and T1 reproduction
 
@@ -23,7 +23,7 @@ Model snapshot location: `artifacts/model_path.txt`. Restore this path from the 
 
 ## What this repository includes
 
-Code, locked dependencies, configs, upstream licenses, source/split ID manifests and T1/T2 reports are versioned. Small measured summaries are copied verbatim into `reports/evidence/`; full local logs and tensors remain local. T1 is a synthetic smoke experiment, not a trained model quality result.
+Code, locked dependencies, configs, upstream licenses, source/split ID manifests and T1–T3 reports are versioned. Small measured summaries are kept under `reports/evidence/`; full local logs and tensors remain local. T1 is a synthetic smoke experiment, not a trained model quality result.
 
 Model weights, raw/derived Glaive data, adapters, `.venv`, caches and `artifacts/` are excluded from Git. A fresh clone therefore does not include the assets required for model/template integration tests or full hash-contract validation. Obtain the pinned upstream model/data separately and restore the local asset manifests before running those commands. The absolute interpreter paths above document the original machine; use your own Python 3.12 and uv paths on another machine. The committed contracts describe the measured local experiment and are not a claim that a fresh clone alone passes full validation.
 
@@ -39,6 +39,20 @@ The data/grouping/sampling/contract unit tests can run independently of download
 - Source and adaptation details: `UPSTREAM.md`.
 - Dependencies: `pyproject.toml`, `uv.lock`.
 - Limits: synthetic examples diagnose execution, not tool-use generalization. MLX allocator peak is not whole-system peak; system pressure and swap are sampled separately.
+
+## T3 Validation result
+
+The formal comparison uses the same pinned MLX base and identical prompts. Without an adapter, strict decision match was **94/200 (47.0%)**; the selected 200-update LoRA adapter scored **107/200 (53.5%)**. Reference arguments matched on **67/100** versus **76/100** call examples. Among all 200 paired questions, 14 improved and one regressed. Most newly correct calls recovered complete output formatting; the two remaining argument improvements belong to one tool family. These are balanced Validation results, not frozen Test results or evidence of broad multi-tool routing.
+
+The selected local adapter is `adapters/t3-r8-v1/update-0200/` (weight SHA256 `997877f895acb3efc710ff567d99143a4ebf0b45ff9c1518852c78e87edeb1a0`). See `reports/T3-validation.md` for denominators, failed examples, resources and limits. Raw predictions and training traces are under `artifacts/t3-r8-v1/`; the small audit snapshot is under `reports/evidence/t3/`. Model/data/adapters remain local.
+
+```sh
+cd /Users/yyy/code/ToolTune
+PYTHONPATH=src .venv/bin/python scripts/recompute_validation.py
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/verify_t3.py
+```
+
+The second command needs the pinned local model, data, adapter and Apple Metal. To create a new experiment from the frozen T2 data, run `scripts/t3.py preflight`, then `baseline`, then `train` using the same offline environment variables. The runner refuses to overwrite an existing run. T3 work is currently on the local `t3-validation` branch and has not been pushed to GitHub.
 
 ## T2 commands and data
 

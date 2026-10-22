@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "train_side_only": true,
+  "examples": 20,
+  "fixed_loss_before": 1.1787697076797485,
+  "fixed_loss_after": 0.5283780097961426,
+  "training": {
+    "optimizer_updates": 30,
+    "micro_steps": 120,
+    "effective_batch": 4,
+    "unique_examples_exposed": 20,
+    "supervised_tokens_exposed": 5382,
+    "input_tokens_exposed": 39846,
+    "trainable_parameters": 327680,
+    "frozen_base_unchanged": true,
+    "changed_adapter_tensors": [
+      "model.layers.32.self_attn.q_proj.lora_a",
+      "model.layers.32.self_attn.q_proj.lora_b",
+      "model.layers.32.self_attn.v_proj.lora_a",
+      "model.layers.32.self_attn.v_proj.lora_b",
+      "model.layers.33.self_attn.q_proj.lora_a",
+      "model.layers.33.self_attn.q_proj.lora_b",
+      "model.layers.33.self_attn.v_proj.lora_a",
+      "model.layers.33.self_attn.v_proj.lora_b",
+      "model.layers.34.self_attn.q_proj.lora_a",
+      "model.layers.34.self_attn.q_proj.lora_b",
+      "model.layers.34.self_attn.v_proj.lora_a",
+      "model.layers.34.self_attn.v_proj.lora_b",
+      "model.layers.35.self_attn.q_proj.lora_a",
+      "model.layers.35.self_attn.q_proj.lora_b",
+      "model.layers.35.self_attn.v_proj.lora_a",
+      "model.layers.35.self_attn.v_proj.lora_b"
+    ],
+    "wall_seconds_including_checkpoints": 53.1492634578608,
+    "mlx_peak_bytes": 3346135483
+  },
+  "resources": {
+    "sample_count": 41,
+    "pressure": {
+      "kern.memorystatus_vm_pressure_level: 1": 1,
+      "kern.memorystatus_vm_pressure_level: 2": 40
+    },
+    "swap_MiB": {
+      "first": 546.44,
+      "last": 734.12,
+      "max": 734.12
+    },
+    "problem": null,
+    "mlx_peak_bytes": 3346135483
+  },
+  "budget": {
+    "formal_optimizer_updates": 200,
+    "formal_microsteps": 800,
+    "training_seconds_point_estimate": 340.4375749629631,
+    "three_validation_generation_seconds_point_estimate": 811.0666726157069,
+    "note": "short resource probe; compilation, sequence lengths and thermal throttling may change elapsed time",
+    "additional_disk_budget_MiB": 512,
+    "formal_wall_limit_minutes": 120
+  }
+}

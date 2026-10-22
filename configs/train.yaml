@@ -1,0 +1,21 @@
+experiment_id: t3-r8-v1
+data_version: v2-balanced
+seed: 42
+batch_size: 1
+grad_accumulation_steps: 4
+optimizer_updates: 200
+checkpoint_updates: [100, 200]
+max_seq_length: 512
+learning_rate: 0.00001
+optimizer: Adam
+num_layers: 4
+grad_checkpoint: true
+lora_parameters:
+  rank: 8
+  scale: 16.0
+  dropout: 0.0
+  keys: [self_attn.q_proj, self_attn.v_proj]
+diagnostic_examples: 20
+diagnostic_updates: 30
+formal_wall_limit_minutes: 120
+rank16_ablation: false
