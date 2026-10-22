@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "synthetic_only": true,
+  "optimizer_updates": 10,
+  "micro_steps": 40,
+  "effective_batch": 4,
+  "trainable_parameters": 327680,
+  "changed_adapter_tensors": [
+    "model.layers.32.self_attn.q_proj.lora_a",
+    "model.layers.32.self_attn.q_proj.lora_b",
+    "model.layers.32.self_attn.v_proj.lora_a",
+    "model.layers.32.self_attn.v_proj.lora_b",
+    "model.layers.33.self_attn.q_proj.lora_a",
+    "model.layers.33.self_attn.q_proj.lora_b",
+    "model.layers.33.self_attn.v_proj.lora_a",
+    "model.layers.33.self_attn.v_proj.lora_b",
+    "model.layers.34.self_attn.q_proj.lora_a",
+    "model.layers.34.self_attn.q_proj.lora_b",
+    "model.layers.34.self_attn.v_proj.lora_a",
+    "model.layers.34.self_attn.v_proj.lora_b",
+    "model.layers.35.self_attn.q_proj.lora_a",
+    "model.layers.35.self_attn.q_proj.lora_b",
+    "model.layers.35.self_attn.v_proj.lora_a",
+    "model.layers.35.self_attn.v_proj.lora_b"
+  ],
+  "frozen_base_unchanged": true,
+  "reload_max_logit_difference": 0.0,
+  "reload_all_tensor_hashes_match": true,
+  "training_seconds": 16.589367874898016,
+  "mlx_peak_bytes_before_reload": 2947495436,
+  "mlx_peak_bytes_entire_run": 2947495436,
+  "total_seconds": 28.084550875239074,
+  "supervised_tokens_per_example": [
+    26,
+    27,
+    26,
+    4,
+    13
+  ]
+}

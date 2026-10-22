@@ -1,0 +1,178 @@
+{
+  "raw_records": 112960,
+  "accepted_conversations": 99108,
+  "rejected_conversations": {
+    "broken_roles": 7619,
+    "invalid_schema": 3109,
+    "invalid_json_or_fields": 372,
+    "unknown_tool": 24,
+    "duplicate_tool": 349,
+    "incomplete_conversation": 1454,
+    "arguments_schema": 804,
+    "invalid_call": 115,
+    "empty_target": 2,
+    "mixed_action": 2,
+    "empty_message": 2
+  },
+  "available_tool_count": {
+    "1": 51874,
+    "2": 12640,
+    "0": 34594
+  },
+  "accepted_message_roles": {
+    "system": 99108,
+    "user": 240387,
+    "assistant": 309010,
+    "tool": 68623
+  },
+  "groups": 21369,
+  "largest_group_sizes": [
+    77025,
+    18,
+    18,
+    10,
+    10,
+    9,
+    9,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5
+  ],
+  "train": {
+    "source_conversations": 94690,
+    "decisions_before_length_filter": 295262,
+    "decision_filters": {
+      "long sample": 69850
+    },
+    "eligible_decisions": 225412,
+    "eligible_actions": {
+      "no_call": 159197,
+      "call": 66215
+    },
+    "length_histogram_bins64": {
+      "256": 57690,
+      "192": 35350,
+      "320": 48671,
+      "448": 27927,
+      "384": 43089,
+      "128": 6258,
+      "64": 4162,
+      "0": 1920,
+      "512": 345
+    },
+    "selected_decisions": 4000,
+    "selected_source_conversations": 3919,
+    "selected_actions": {
+      "call": 1207,
+      "no_call": 2793
+    },
+    "selected_tool_counts": {
+      "2": 607,
+      "1": 2470,
+      "0": 923
+    },
+    "selected_supervised_tokens": 206911,
+    "selected_total_tokens": 1326198
+  },
+  "valid": {
+    "source_conversations": 2171,
+    "decisions_before_length_filter": 6802,
+    "decision_filters": {
+      "long sample": 3810
+    },
+    "eligible_decisions": 2992,
+    "eligible_actions": {
+      "no_call": 2892,
+      "call": 100
+    },
+    "length_histogram_bins64": {
+      "256": 486,
+      "384": 552,
+      "448": 553,
+      "128": 275,
+      "320": 515,
+      "192": 353,
+      "64": 171,
+      "0": 78,
+      "512": 9
+    },
+    "selected_decisions": 200,
+    "selected_source_conversations": 189,
+    "selected_actions": {
+      "no_call": 195,
+      "call": 5
+    },
+    "selected_tool_counts": {
+      "0": 188,
+      "1": 12
+    },
+    "selected_supervised_tokens": 27205,
+    "selected_total_tokens": 63706
+  },
+  "test": {
+    "source_conversations": 2247,
+    "decisions_before_length_filter": 6946,
+    "decision_filters": {
+      "long sample": 3962
+    },
+    "eligible_decisions": 2984,
+    "eligible_actions": {
+      "no_call": 2889,
+      "call": 95
+    },
+    "length_histogram_bins64": {
+      "256": 466,
+      "384": 561,
+      "448": 541,
+      "192": 367,
+      "320": 547,
+      "0": 82,
+      "64": 166,
+      "128": 247,
+      "512": 7
+    },
+    "selected_decisions": 300,
+    "selected_source_conversations": 276,
+    "selected_actions": {
+      "no_call": 286,
+      "call": 14
+    },
+    "selected_tool_counts": {
+      "0": 279,
+      "1": 21
+    },
+    "selected_supervised_tokens": 42490,
+    "selected_total_tokens": 99309
+  },
+  "mask_example_cases": {
+    "call": "glaive-v2:078990:a6",
+    "ordinary_answer": "glaive-v2:074237:a6",
+    "tools_present_noncall": "glaive-v2:015743:a2",
+    "tool_history": "glaive-v2:078990:a6"
+  },
+  "explicit_clarification_gold_labels": 0,
+  "unavailable_tools_reviewed_labels": 0,
+  "leakage_audit": {
+    "train:valid:groups_overlap": 0,
+    "train:valid:families_overlap": 0,
+    "train:valid:queries_overlap": 0,
+    "train:test:groups_overlap": 0,
+    "train:test:families_overlap": 0,
+    "train:test:queries_overlap": 0,
+    "valid:test:groups_overlap": 0,
+    "valid:test:families_overlap": 0,
+    "valid:test:queries_overlap": 0,
+    "selected_cross_split_near_duplicate_pairs": 0
+  },
+  "seconds": 255.4573490829207
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Source/config/tests/manifests/reports only; local weights/data/adapters/env/caches excluded",
+  "checks": {
+    "pytest": {
+      "exit_code": 0,
+      "stdout": ".........................................                                [100%]\n41 passed in 0.96s"
+    },
+    "balanced_contract": {
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"version\": \"v2-balanced\",\n  \"verified_files\": 65,\n  \"counts\": {\n    \"train\": 4000,\n    \"valid\": 200,\n    \"test\": 190\n  },\n  \"train_unchanged\": true,\n  \"model_evaluation_run\": false\n}"
+    }
+  },
+  "files_scanned": 52,
+  "credential_pattern_scan": "no matches",
+  "time_unix": 1792648751.478573
+}

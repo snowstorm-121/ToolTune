@@ -1,0 +1,10 @@
+[project]
+name = "tooltune"
+version = "0.1.0"
+description = "Local MLX tool-calling LoRA experiment"
+requires-python = ">=3.12,<3.13"
+dependencies = ["mlx-lm[train]", "jsonschema", "pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

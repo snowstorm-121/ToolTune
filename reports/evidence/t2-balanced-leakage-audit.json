@@ -1,0 +1,17 @@
+{
+  "train:valid:sources_overlap": 0,
+  "train:valid:groups_overlap": 0,
+  "train:valid:families_overlap": 0,
+  "train:valid:normalized_query_overlap": 0,
+  "train:valid:near_duplicate_pairs": 0,
+  "train:test:sources_overlap": 0,
+  "train:test:groups_overlap": 0,
+  "train:test:families_overlap": 0,
+  "train:test:normalized_query_overlap": 0,
+  "train:test:near_duplicate_pairs": 0,
+  "valid:test:sources_overlap": 0,
+  "valid:test:groups_overlap": 0,
+  "valid:test:families_overlap": 0,
+  "valid:test:normalized_query_overlap": 0,
+  "valid:test:near_duplicate_pairs": 0
+}

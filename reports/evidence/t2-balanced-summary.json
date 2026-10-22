@@ -1,0 +1,77 @@
+{
+  "version": "v2-balanced",
+  "parent_version": "v1",
+  "distribution": "balanced diagnostic; not population representative",
+  "user_approved": "2026-10-22: Validation 100+100; Test 95+95; no split reassignment or fabricated labels",
+  "candidate_pools": {
+    "valid": {
+      "no_call": 2892,
+      "call": 100
+    },
+    "test": {
+      "no_call": 2889,
+      "call": 95
+    }
+  },
+  "splits": {
+    "train": {
+      "decisions": 4000,
+      "actions": {
+        "call": 1207,
+        "no_call": 2793
+      },
+      "source_conversations": 3919,
+      "groups": 393,
+      "available_tool_counts": {
+        "2": 607,
+        "1": 2470,
+        "0": 923
+      },
+      "supervised_tokens": 206911,
+      "total_tokens": 1326198
+    },
+    "valid": {
+      "decisions": 200,
+      "actions": {
+        "no_call": 100,
+        "call": 100
+      },
+      "source_conversations": 176,
+      "groups": 172,
+      "available_tool_counts": {
+        "0": 97,
+        "1": 103
+      },
+      "supervised_tokens": 18646,
+      "total_tokens": 65263
+    },
+    "test": {
+      "decisions": 190,
+      "actions": {
+        "no_call": 95,
+        "call": 95
+      },
+      "source_conversations": 165,
+      "groups": 163,
+      "available_tool_counts": {
+        "0": 94,
+        "1": 96
+      },
+      "supervised_tokens": 17394,
+      "total_tokens": 61630
+    }
+  },
+  "reproduction": {
+    "valid": {
+      "reparsed_reversed_sources": true,
+      "full_records_byte_identical": true
+    },
+    "test": {
+      "reparsed_reversed_sources": true,
+      "full_records_byte_identical": true
+    }
+  },
+  "train_unchanged": true,
+  "model_evaluation_run": false,
+  "seconds": 25.320117374882102
+}

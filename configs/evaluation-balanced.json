@@ -1,0 +1,35 @@
+{
+  "protocol_version": "v2-balanced",
+  "seed": 42,
+  "max_seq_length": 512,
+  "sample_caps": {
+    "train": 4000,
+    "valid": 200,
+    "test": 190
+  },
+  "sampling": "Train byte-identical to v1; within each original held-out split, sha256(seed, sample_id) selects equal call/no_call counts; valid 100+100, test 95+95",
+  "decode": {
+    "temperature": 0.0,
+    "max_tokens": 256,
+    "stop": "tokenizer_eos",
+    "constrained_json": false
+  },
+  "primary_metric": "strict_decision_match",
+  "actions": [
+    "call",
+    "no_call"
+  ],
+  "noncall_scoring": "evaluate presence/absence of a structured call only; no text correctness claim",
+  "arguments_normalization": "JSON object key order only; preserve value types, array order, case and string format",
+  "unavailable_tools_subset": "requires explicit reviewed annotation; otherwise denominator zero and N/A",
+  "clarification_subset": "no source gold label; do not automatically infer from a question mark",
+  "schema": "Draft7 plus installed FormatChecker; honor additionalProperties as declared; no added restrictions or remote refs",
+  "failures_remain_in_denominator": true,
+  "retry_wrong_predictions": false,
+  "checkpoint_selection": "Validation strict match, then reviewed unavailable-tools false-call rate if defined, then earlier update",
+  "test_status": "frozen IDs only; no model evaluation until T4",
+  "parent_protocol": "v1",
+  "dataset_directory": "data/derived/v2-balanced",
+  "distribution": "balanced diagnostic, not original population distribution",
+  "user_approval": "2026-10-22: adopt balanced sampling before any formal model evaluation"
+}

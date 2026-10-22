@@ -1,0 +1,14 @@
+seed: 42
+batch_size: 1
+max_seq_length: 512
+optimizer_updates: 10
+grad_accumulation_steps: 4
+learning_rate: 0.00001
+num_layers: 4
+lora_parameters:
+  rank: 8
+  scale: 16.0
+  dropout: 0.0
+  keys: [self_attn.q_proj, self_attn.v_proj]
+grad_checkpoint: true
+max_output_tokens: 128

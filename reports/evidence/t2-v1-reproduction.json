@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "source_order": "reversed on second run",
+  "source_parse_counts_match": true,
+  "all_source_group_assignments_match": true,
+  "selected_files_reproduced": {
+    "data/derived/v1/train.records.jsonl": "3f4d4534c83ef6a3696fea614b903c08f3e1380e769e10d8d10456a9fd76cf5d",
+    "data/derived/v1/train.jsonl": "8e20206a8cb7d13d2157ea0a47bb16f05db641853b3ce496aa94be56e2b62dbc",
+    "data/derived/v1/valid.records.jsonl": "6ff9c348b83005e4f2f0f21c8d179e5a2a1b4037523c0a4860562609e6177a2d",
+    "data/derived/v1/valid.jsonl": "6f769dd96f94aef3f89429b58b153d76c2c55534e011798584e99677688c029d",
+    "data/derived/v1/test.records.jsonl": "4ac7f46d8aa0fbfa6992cc4f2589e49b563e64ed962eba0803b8bf079b2b65ea",
+    "data/derived/v1/test.jsonl": "ca497c532bd52a14556f932b9711d8569717d7cff4720ce4acfadda82109ab3b"
+  },
+  "parser_hardening": {
+    "src/tooltune/data.py": {
+      "previous_sha256": "2fa4f41621360052c0329cdaec82a34e39cf4d79eb18930c0527d17157de8672",
+      "current_sha256": "02d19eed0f33cf8b904c1533f5476ec25e8373951d2a478fcb8bc4983a205587"
+    }
+  },
+  "seconds": 19.734366833698004
+}

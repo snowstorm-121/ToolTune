@@ -1,0 +1,8 @@
+{
+  "source": "glaiveai/glaive-function-calling-v2",
+  "revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+  "path": "/Users/yyy/code/ToolTune/data/raw/glaive-v2/glaive-function-calling-v2.json",
+  "bytes": 271190065,
+  "sha256": "e9b5d671812b5ca2fbd7b625a37d5c99a19576c37252cdc806defe256aea6dad",
+  "license": "apache-2.0"
+}

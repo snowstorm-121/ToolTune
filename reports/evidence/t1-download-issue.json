@@ -1,0 +1,8 @@
+{
+  "problem": "Xet download stalled at 162370430 bytes for multiple minutes",
+  "action": "SIGINT own downloader and retry same revision with HF_HUB_DISABLE_XET=1",
+  "partial_preserved": true,
+  "termination": "SIGINT did not release lock; SIGTERM sent only to own PID 69000",
+  "http_result": "successful; separate temporary file used, original 155 MiB Xet partial retained",
+  "final_model_sha256": "2a73c6c248601ab904e035548abd8e6abb65ea27dcb5f342fb0a8910eb44173f"
+}

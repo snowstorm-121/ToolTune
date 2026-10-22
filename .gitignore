@@ -1,0 +1,9 @@
+.venv/
+.cache/
+models/
+data/raw/
+data/derived/
+adapters/
+artifacts/
+__pycache__/
+.pytest_cache/
