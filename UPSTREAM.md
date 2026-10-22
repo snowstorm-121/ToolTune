@@ -5,7 +5,7 @@
 - Official model and template: https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507 ; revision `cdbee75f17c01a7cc42f958dc650907174af0554` (Apache-2.0). `configs/chat_template.jinja` is extracted verbatim from this revision's `tokenizer_config.json`. The community snapshot contains an outdated thinking template; the project overrides it explicitly for both training and inference, without editing the snapshot. Original files are retained in `artifacts/upstream/`.
 - Dataset (T2): https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2 ; revision `e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac` (Apache-2.0). Dataset availability does not imply external APIs have been executed.
 
-Project code is a thin orchestration/data/validation layer. It does not implement MLX quantization, optimizers, model architecture or automatic differentiation. Engineering was assisted by Codex; interview claims must reflect actual understanding and measured artifacts.
+Project code is a thin orchestration/data/validation layer. It does not implement MLX quantization, optimizers, model architecture or automatic differentiation. All reported results are tied to saved predictions and experiment records.
 
 ## Local compatibility changes
 
