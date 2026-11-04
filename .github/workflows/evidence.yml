@@ -1,0 +1,11 @@
+name: Public evidence audit
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify frozen source hashes and paired results
+        run: python3 -m unittest discover -s tests -p test_public_evidence.py -v

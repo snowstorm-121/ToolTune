@@ -39,6 +39,8 @@
 
 ## 验证与复现
 
+无需模型和第三方依赖即可核验公开证据：`python3 -m unittest discover -s tests -p test_public_evidence.py -v`。该检查也用于 GitHub Actions，覆盖源码哈希、Test ID、逐题转移及严格匹配总数。完整资产要求与新机器限制见 [复现指南](reports/REPRODUCTION.md)；审查发现的保护缺口及后续实验优先级见 [项目复审](reports/REVIEW.md)。
+
 环境为 Apple Silicon、Python 3.12、[锁定依赖](uv.lock)。本机最终验收为 **68 项测试通过**、T2 的 **65 文件哈希契约通过**、两臂各 **190 条首次预测**、逐题 prompt token 一致且原始预测复算与摘要一致。模型 revision、原始数据 revision、许可证和本地兼容处理见 [UPSTREAM.md](UPSTREAM.md)。
 
 仓库可直接进行不依赖已下载模型资产的代码测试：
