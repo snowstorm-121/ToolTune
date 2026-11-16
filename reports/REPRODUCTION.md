@@ -12,6 +12,17 @@ python3 -m unittest discover -s tests -p test_public_evidence.py -v
 
 ## 原实验机器：完整验收
 
+对已有完整 T3/T4 资产，先使用新的受保护入口检查。首次明确建立保护清单（只执行一次，拒绝覆盖）：
+
+```sh
+.venv/bin/python scripts/checked_run.py freeze
+.venv/bin/python scripts/checked_run.py verify
+```
+
+本机已建立 `artifacts/input-guard-v1.json`。后续只运行 `verify`；失败时先调查差异，不要删除清单重新冻结来绕过检查。该清单建立于原实验完成后，不提供追溯保证。
+
+确需调用既有实验脚本时使用 `scripts/checked_run.py t3 preflight`、`t3 baseline`、`t3 train` 或 `t4 freeze`、`t4 baseline`、`t4 adapter`（各自为同一入口的参数）。它先验证真实资产再调用原脚本，原脚本的拒绝覆盖规则继续有效。该入口需要已有选中 adapter，不能用于新克隆从零训练；也不会自动授权重跑 Test。
+
 ```sh
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python -m pytest -q
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/prepare_balanced.py --validate
